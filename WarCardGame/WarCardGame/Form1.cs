@@ -16,6 +16,10 @@ namespace WarCardGame
         {
             InitializeComponent();
         }
+
+
+        public string[] OpponentDeck = new string[26];
+        public string[] PlayerDeck = new string[26];
         public int opponentleftpos = 175;
         public int opponenttoppos = 275;
         public int leftpos = 50;
@@ -53,10 +57,17 @@ namespace WarCardGame
 
             while (i < 26)
             {
-                Random rand = new Random();
+                
+
+                Random rand = new Random(DateTime.Now.Millisecond);
                 int Cardpick = rand.Next(0, 51);
                 PictureBox newCard = new PictureBox();
                 newCard.Size = new Size(50, 70);
+
+                //this line is gonna stick whichever random card is pulled into a seperate array
+                //to check against, to mimic an actual deck being physically seperated, with no chance
+                //of getting the same card as your opponent.
+               // OpponentDeck[i] = 
 
                 newCard.Location = new Point(opponentleftpos, opponenttoppos);
                 newCard.Image = imageListCardDeck.Images[Cardpick];
@@ -70,7 +81,7 @@ namespace WarCardGame
 
             while (x < 26)
             {
-                Random rand = new Random();
+                Random rand = new Random(DateTime.Now.Millisecond);
                 int Cardpick = rand.Next(0, 51);
                 PictureBox newCard = new PictureBox();
                 newCard.Size = new Size(100, 140);

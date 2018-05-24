@@ -97,7 +97,7 @@
             // pictureBoxCardStack
             // 
             this.pictureBoxCardStack.Image = global::WarCardGame.Properties.Resources.RedCard_stack;
-            this.pictureBoxCardStack.Location = new System.Drawing.Point(574, 329);
+            this.pictureBoxCardStack.Location = new System.Drawing.Point(588, 309);
             this.pictureBoxCardStack.Name = "pictureBoxCardStack";
             this.pictureBoxCardStack.Size = new System.Drawing.Size(70, 68);
             this.pictureBoxCardStack.TabIndex = 1;
@@ -120,9 +120,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WarCardGame.Properties.Resources.table_bg;
-            this.ClientSize = new System.Drawing.Size(792, 573);
+            this.ClientSize = new System.Drawing.Size(792, 597);
             this.Controls.Add(this.pictureBoxCardStack);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCardStack)).EndInit();

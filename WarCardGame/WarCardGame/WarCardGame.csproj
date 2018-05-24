@@ -51,10 +51,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewPlayerPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPlayerPrompt.Designer.cs">
+      <DependentUpon>NewPlayerPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerSelect.Designer.cs">
+      <DependentUpon>PlayerSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPlayerPrompt.resx">
+      <DependentUpon>NewPlayerPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerSelect.resx">
+      <DependentUpon>PlayerSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
