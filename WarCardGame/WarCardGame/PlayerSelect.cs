@@ -23,13 +23,7 @@ namespace WarCardGame
             InitializeComponent();
         }
 
-        private void buttonStartGame_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1();
-            this.Hide();
-            f1.ShowDialog();
-            this.Close();
-        }
+        
 
         private void PlayerSelect_Load(object sender, EventArgs e)
         {
@@ -78,11 +72,12 @@ namespace WarCardGame
             }
         }
 
-        private void listBoxPlayers_SelectedIndexChanged(object sender, EventArgs e)
+        public void listBoxPlayers_SelectedIndexChanged(object sender, EventArgs e)
         {
             label3.Text = Highscores[listBoxPlayers.SelectedIndex].ToString();
             label5.Text = DatePlayed[listBoxPlayers.SelectedIndex];
-
+            
+            
 
 
         }
@@ -93,6 +88,33 @@ namespace WarCardGame
             this.Hide();
             NPP.ShowDialog();
             this.Close();
+        }
+
+        private void buttonStartGame_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            
+            ChooseOpponent CO = new ChooseOpponent();
+            
+            CO.PlayerName = PlayerNames[listBoxPlayers.SelectedIndex].ToString();
+
+            this.Hide();
+            CO.ShowDialog();
+            this.Close();
+
+              
+            }catch
+            {
+                MessageBox.Show("Please Select a Player.");
+
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
