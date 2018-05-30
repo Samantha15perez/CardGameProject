@@ -35,7 +35,15 @@
             this.imageListCardsOpponent = new System.Windows.Forms.ImageList(this.components);
             this.imageListCardsPlayer = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxBG = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOpponent = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.forfeitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.forfeitMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCardStack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponent)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageListCardDeck
@@ -98,7 +106,7 @@
             // pictureBoxCardStack
             // 
             this.pictureBoxCardStack.Image = global::WarCardGame.Properties.Resources.RedCard_stack;
-            this.pictureBoxCardStack.Location = new System.Drawing.Point(588, 309);
+            this.pictureBoxCardStack.Location = new System.Drawing.Point(378, 369);
             this.pictureBoxCardStack.Name = "pictureBoxCardStack";
             this.pictureBoxCardStack.Size = new System.Drawing.Size(70, 68);
             this.pictureBoxCardStack.TabIndex = 1;
@@ -119,11 +127,54 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 6);
+            this.label1.Location = new System.Drawing.Point(12, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Player: ";
+            // 
+            // pictureBoxBG
+            // 
+            this.pictureBoxBG.Image = global::WarCardGame.Properties.Resources.table2;
+            this.pictureBoxBG.Location = new System.Drawing.Point(0, 22);
+            this.pictureBoxBG.Name = "pictureBoxBG";
+            this.pictureBoxBG.Size = new System.Drawing.Size(792, 575);
+            this.pictureBoxBG.TabIndex = 3;
+            this.pictureBoxBG.TabStop = false;
+            this.pictureBoxBG.Click += new System.EventHandler(this.pictureBoxBG_Click);
+            // 
+            // pictureBoxOpponent
+            // 
+            this.pictureBoxOpponent.Location = new System.Drawing.Point(271, 50);
+            this.pictureBoxOpponent.Name = "pictureBoxOpponent";
+            this.pictureBoxOpponent.Size = new System.Drawing.Size(300, 250);
+            this.pictureBoxOpponent.TabIndex = 4;
+            this.pictureBoxOpponent.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.forfeitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(792, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // forfeitToolStripMenuItem
+            // 
+            this.forfeitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.forfeitMatchToolStripMenuItem});
+            this.forfeitToolStripMenuItem.Name = "forfeitToolStripMenuItem";
+            this.forfeitToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.forfeitToolStripMenuItem.Text = "Options";
+            // 
+            // forfeitMatchToolStripMenuItem
+            // 
+            this.forfeitMatchToolStripMenuItem.Name = "forfeitMatchToolStripMenuItem";
+            this.forfeitMatchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.forfeitMatchToolStripMenuItem.Text = "Forfeit Match";
+            this.forfeitMatchToolStripMenuItem.Click += new System.EventHandler(this.forfeitMatchToolStripMenuItem_Click_1);
             // 
             // Form1
             // 
@@ -131,13 +182,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WarCardGame.Properties.Resources.table2;
             this.ClientSize = new System.Drawing.Size(792, 597);
+            this.Controls.Add(this.pictureBoxOpponent);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxCardStack);
+            this.Controls.Add(this.pictureBoxBG);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCardStack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponent)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +211,11 @@
         private System.Windows.Forms.ImageList imageListCardsOpponent;
         private System.Windows.Forms.ImageList imageListCardsPlayer;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBoxBG;
+        private System.Windows.Forms.PictureBox pictureBoxOpponent;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem forfeitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem forfeitMatchToolStripMenuItem;
     }
 }
 

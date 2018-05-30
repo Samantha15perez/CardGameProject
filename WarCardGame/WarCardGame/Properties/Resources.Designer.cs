@@ -63,6 +63,16 @@ namespace WarCardGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fullbody1 {
+            get {
+                object obj = ResourceManager.GetObject("fullbody1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap op1 {
             get {
                 object obj = ResourceManager.GetObject("op1", resourceCulture);
