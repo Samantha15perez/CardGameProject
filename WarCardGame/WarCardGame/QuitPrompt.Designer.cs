@@ -39,7 +39,7 @@
             this.buttonback.Name = "buttonback";
             this.buttonback.Size = new System.Drawing.Size(87, 31);
             this.buttonback.TabIndex = 0;
-            this.buttonback.Text = "back";
+            this.buttonback.Text = "Back";
             this.buttonback.UseVisualStyleBackColor = true;
             this.buttonback.Click += new System.EventHandler(this.buttonback_Click);
             // 
@@ -49,7 +49,7 @@
             this.buttonquit.Name = "buttonquit";
             this.buttonquit.Size = new System.Drawing.Size(87, 31);
             this.buttonquit.TabIndex = 1;
-            this.buttonquit.Text = "quit";
+            this.buttonquit.Text = "Quit";
             this.buttonquit.UseVisualStyleBackColor = true;
             this.buttonquit.Click += new System.EventHandler(this.buttonquit_Click);
             // 
@@ -62,6 +62,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Are you sure you want to quit? (This means you lose!)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // QuitPrompt
             // 

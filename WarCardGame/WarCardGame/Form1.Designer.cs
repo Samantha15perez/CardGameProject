@@ -40,6 +40,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.forfeitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forfeitMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonRemoveCardTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCardStack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponent)).BeginInit();
@@ -160,6 +161,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(792, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // forfeitToolStripMenuItem
             // 
@@ -172,9 +174,19 @@
             // forfeitMatchToolStripMenuItem
             // 
             this.forfeitMatchToolStripMenuItem.Name = "forfeitMatchToolStripMenuItem";
-            this.forfeitMatchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.forfeitMatchToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.forfeitMatchToolStripMenuItem.Text = "Forfeit Match";
             this.forfeitMatchToolStripMenuItem.Click += new System.EventHandler(this.forfeitMatchToolStripMenuItem_Click_1);
+            // 
+            // buttonRemoveCardTest
+            // 
+            this.buttonRemoveCardTest.Location = new System.Drawing.Point(66, 135);
+            this.buttonRemoveCardTest.Name = "buttonRemoveCardTest";
+            this.buttonRemoveCardTest.Size = new System.Drawing.Size(123, 45);
+            this.buttonRemoveCardTest.TabIndex = 6;
+            this.buttonRemoveCardTest.Text = "RemoveCardTest";
+            this.buttonRemoveCardTest.UseVisualStyleBackColor = true;
+            this.buttonRemoveCardTest.Click += new System.EventHandler(this.buttonRemoveCardTest_Click);
             // 
             // Form1
             // 
@@ -182,6 +194,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WarCardGame.Properties.Resources.table2;
             this.ClientSize = new System.Drawing.Size(792, 597);
+            this.Controls.Add(this.buttonRemoveCardTest);
             this.Controls.Add(this.pictureBoxOpponent);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxCardStack);
@@ -216,6 +229,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem forfeitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forfeitMatchToolStripMenuItem;
+        private System.Windows.Forms.Button buttonRemoveCardTest;
     }
 }
 

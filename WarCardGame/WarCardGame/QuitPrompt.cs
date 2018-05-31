@@ -36,5 +36,10 @@ namespace WarCardGame
             this.Close();
             //closes the prompt, continuing the game from where it left off
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

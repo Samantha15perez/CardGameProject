@@ -17,7 +17,7 @@ using System.Windows.Forms;
  * check both card values against each other and choose a winner
  *  (decide whether or not the 'won' card goes into your deck or to the side as a prize)
  *  
- * 
+ * card value depends on the actual image name within the image list
  * 
  * 
  * 
@@ -56,14 +56,12 @@ namespace WarCardGame
             pictureBoxOpponent.BackColor = Color.Transparent;
         }
 
-        
-        
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+            
             label1.Text = PlayerName;
-            if (Opponent == 0) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody1.png"; }
+            if (Opponent == 0) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody11.png"; }
             if (Opponent == 1) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody2.png"; }
             if (Opponent == 2) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody3.png"; }
             if (Opponent == 3) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody4.png"; }
@@ -133,6 +131,24 @@ namespace WarCardGame
             QuitPrompt q1 = new QuitPrompt();
 
             q1.ShowDialog();
+
+            
+        }
+
+        private void pictureBoxBG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void buttonRemoveCardTest_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random(DateTime.Now.Millisecond);
+            int Cardpick = rand.Next(0, 26);
 
             
         }

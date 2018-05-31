@@ -52,9 +52,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(169, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 13);
+            this.label1.Size = new System.Drawing.Size(151, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Please, choose your opponent:";
+            this.label1.Text = "Please choose your opponent:";
             // 
             // buttonRandomize
             // 
@@ -74,7 +74,6 @@
             this.label2.Size = new System.Drawing.Size(170, 30);
             this.label2.TabIndex = 4;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBoxChar4
             // 
@@ -140,7 +139,7 @@
             this.buttonStartGame.Name = "buttonStartGame";
             this.buttonStartGame.Size = new System.Drawing.Size(75, 30);
             this.buttonStartGame.TabIndex = 5;
-            this.buttonStartGame.Text = "START";
+            this.buttonStartGame.Text = "Start";
             this.buttonStartGame.UseVisualStyleBackColor = true;
             this.buttonStartGame.Click += new System.EventHandler(this.buttonStartGame_Click);
             // 

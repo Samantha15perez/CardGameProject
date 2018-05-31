@@ -27,6 +27,8 @@ namespace WarCardGame
 
         private void PlayerSelect_Load(object sender, EventArgs e)
         {
+
+            
             try
             {
 
@@ -64,7 +66,7 @@ namespace WarCardGame
                 inputFile.Close();
 
             listBoxPlayers.DataSource = PlayerNames;
-
+                
             }
             catch (Exception ex)
             {
@@ -76,9 +78,6 @@ namespace WarCardGame
         {
             label3.Text = Highscores[listBoxPlayers.SelectedIndex].ToString();
             label5.Text = DatePlayed[listBoxPlayers.SelectedIndex];
-            
-            
-
 
         }
 
@@ -107,14 +106,10 @@ namespace WarCardGame
               
             }catch
             {
-                MessageBox.Show("Please Select a Player.");
+                MessageBox.Show("Hunter was here c:");
 
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
