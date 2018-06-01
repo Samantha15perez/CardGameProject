@@ -27,8 +27,8 @@ namespace WarCardGame
 
         private void PlayerSelect_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
 
-            
             try
             {
 

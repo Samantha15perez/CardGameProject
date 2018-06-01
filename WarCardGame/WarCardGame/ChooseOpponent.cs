@@ -22,6 +22,8 @@ namespace WarCardGame
 
         private void ChooseOpponent_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
+
             pictureBoxPreview.BackgroundImage = imageListOpponent.Images[0];
             label2.Text = "Placeholder.Red_Easy";
             OpponentSelect = 0;

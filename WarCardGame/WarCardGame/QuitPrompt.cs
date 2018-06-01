@@ -20,7 +20,7 @@ namespace WarCardGame
 
         private void QuitPrompt_Load(object sender, EventArgs e)
         {
-
+            this.MaximizeBox = false;
         }
 
         private void buttonquit_Click(object sender, EventArgs e)

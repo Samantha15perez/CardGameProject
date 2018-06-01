@@ -39,7 +39,7 @@ namespace WarCardGame
         public int Opponent;
         public string[] CardDeck = new string[52];
         public string[] OpponentDeck = new string[26];
-        public string[] PlayerDeck = new string[26];
+        public string[] DeckOpponent = new string[26];
         public int opponentleftpos = 250;
         public int opponenttoppos = 275;
         public int leftpos = 100;
@@ -58,7 +58,7 @@ namespace WarCardGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            this.MaximizeBox = false;
             
             label1.Text = PlayerName;
             if (Opponent == 0) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody11.png"; }
@@ -70,27 +70,31 @@ namespace WarCardGame
 
             foreach (string card in imageListCardDeck.Images.Keys) 
             {
-                
+                Random rand = new Random(DateTime.Now.Millisecond);
+                int Cardpick = rand.Next(0, 51);
+
+
 
             }
 
             while (i < 26)
             {
                 Random rand = new Random(DateTime.Now.Millisecond);
-                int Cardpick = rand.Next(0, 52);
+                int Cardpick = rand.Next(0, 51);
 
-                if (!PlayerDeck.Contains(imageListCardDeck.Images.Keys[Cardpick]))
-                {
-                    PictureBox newCard = new PictureBox();
-                    newCard.Size = new Size(50, 70);
-                    newCard.Location = new Point(opponentleftpos, opponenttoppos);
-                    newCard.Image = imageListCardDeck.Images[Cardpick];
-                    this.Controls.Add(newCard);
-                    newCard.BringToFront();
-                    opponentleftpos = (opponentleftpos + 10);
-                    PlayerDeck[i] = imageListCardDeck.Images.Keys[Cardpick];
 
+                if (!imageListCardsOpponent.Images.ContainsKey(imageListCardDeck.Images.Keys[Cardpick]))
+                { 
+
+                    imageListCardsOpponent.Images.Add(imageListCardDeck.Images[Cardpick]);
+                    imageListCardsOpponent.Images.Keys.Add(imageListCardDeck.Images.Keys[Cardpick]);
                     i++;
+                   
+
+                }
+                else
+                {
+                    
                 }
                 
             }
@@ -101,26 +105,29 @@ namespace WarCardGame
                 Random rand = new Random(DateTime.Now.Millisecond);
                 int Cardpick = rand.Next(0, 51);
 
-                
-                    if (!PlayerDeck.Contains(imageListCardDeck.Images.Keys[Cardpick]))
-                    {
 
-                    if (!OpponentDeck.Contains(imageListCardDeck.Images.Keys[Cardpick]))
-                    {
-                        PictureBox newCard = new PictureBox();
-                        newCard.Size = new Size(100, 140);
-                        newCard.BackgroundImage = imageListCardDeck.Images[Cardpick];
-                        newCard.BackgroundImageLayout = ImageLayout.Stretch;
-                        
-                        newCard.Location = new Point(leftpos, toppos);
 
-                        this.Controls.Add(newCard);
-                        newCard.BringToFront();
-                        leftpos = (leftpos + 20);
+                if (!imageListCardsOpponent.Images.ContainsKey(imageListCardDeck.Images.Keys[Cardpick]))
+                {
+
+                    if (!imageListCardsPlayer.Images.ContainsKey(imageListCardDeck.Images.Keys[Cardpick]))
+                    {
+                        imageListCardsPlayer.Images.Add(imageListCardDeck.Images[Cardpick]);
+                        imageListCardsPlayer.Images.Keys.Add(imageListCardDeck.Images.Keys[Cardpick]);
+
 
                         x++;
+
                     }
-                    OpponentDeck[x] = imageListCardDeck.Images.Keys[Cardpick];
+                    else
+                    {
+                        
+                    }
+
+                }
+                else
+                {
+                   
                 }
 
             }
@@ -149,8 +156,73 @@ namespace WarCardGame
         {
             Random rand = new Random(DateTime.Now.Millisecond);
             int Cardpick = rand.Next(0, 26);
+            MessageBox.Show(imageListCardDeck.Images.Keys[Cardpick].ToString());
 
-            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pictureBox1.Image = imageListCardsOpponent.Images[0];
+                pictureBox2.Image = imageListCardsOpponent.Images[1];
+                pictureBox3.Image = imageListCardsOpponent.Images[2];
+                pictureBox4.Image = imageListCardsOpponent.Images[3];
+                pictureBox5.Image = imageListCardsOpponent.Images[4];
+                pictureBox6.Image = imageListCardsOpponent.Images[5];
+                pictureBox7.Image = imageListCardsOpponent.Images[6];
+                pictureBox8.Image = imageListCardsOpponent.Images[7];
+                pictureBox9.Image = imageListCardsOpponent.Images[8];
+                pictureBox10.Image = imageListCardsOpponent.Images[9];
+                pictureBox11.Image = imageListCardsOpponent.Images[10];
+                pictureBox12.Image = imageListCardsOpponent.Images[11];
+                pictureBox13.Image = imageListCardsOpponent.Images[12];
+                pictureBox14.Image = imageListCardsOpponent.Images[13];
+                pictureBox15.Image = imageListCardsOpponent.Images[14];
+                pictureBox16.Image = imageListCardsOpponent.Images[15];
+                pictureBox17.Image = imageListCardsOpponent.Images[16];
+                pictureBox18.Image = imageListCardsOpponent.Images[17];
+                pictureBox19.Image = imageListCardsOpponent.Images[18];
+                pictureBox20.Image = imageListCardsOpponent.Images[19];
+                pictureBox21.Image = imageListCardsOpponent.Images[20];
+                pictureBox22.Image = imageListCardsOpponent.Images[21];
+                pictureBox23.Image = imageListCardsOpponent.Images[22];
+                pictureBox24.Image = imageListCardsOpponent.Images[23];
+                pictureBox25.Image = imageListCardsOpponent.Images[24];
+                pictureBox26.Image = imageListCardsOpponent.Images[25];
+
+                pictureBox27.Image = imageListCardsPlayer.Images[0]; 
+                pictureBox28.Image = imageListCardsPlayer.Images[1]; 
+                pictureBox29.Image = imageListCardsPlayer.Images[2]; 
+                pictureBox30.Image = imageListCardsPlayer.Images[3]; 
+                pictureBox31.Image = imageListCardsPlayer.Images[4]; 
+                pictureBox32.Image = imageListCardsPlayer.Images[5]; 
+                pictureBox33.Image = imageListCardsPlayer.Images[6]; 
+                pictureBox34.Image = imageListCardsPlayer.Images[7]; 
+                pictureBox35.Image = imageListCardsPlayer.Images[8]; 
+                pictureBox36.Image = imageListCardsPlayer.Images[9]; 
+                pictureBox37.Image = imageListCardsPlayer.Images[10]; 
+                pictureBox38.Image = imageListCardsPlayer.Images[11]; 
+                pictureBox39.Image = imageListCardsPlayer.Images[12]; 
+                pictureBox40.Image = imageListCardsPlayer.Images[13]; 
+                pictureBox41.Image = imageListCardsPlayer.Images[14]; 
+                pictureBox42.Image = imageListCardsPlayer.Images[15]; 
+                pictureBox43.Image = imageListCardsPlayer.Images[16]; 
+                pictureBox44.Image = imageListCardsPlayer.Images[17]; 
+                pictureBox45.Image = imageListCardsPlayer.Images[18]; 
+                pictureBox46.Image = imageListCardsPlayer.Images[19]; 
+                pictureBox47.Image = imageListCardsPlayer.Images[20]; 
+                pictureBox48.Image = imageListCardsPlayer.Images[21]; 
+                pictureBox49.Image = imageListCardsPlayer.Images[22]; 
+                pictureBox50.Image = imageListCardsPlayer.Images[23]; 
+                pictureBox51.Image = imageListCardsPlayer.Images[24]; 
+                pictureBox52.Image = imageListCardsPlayer.Images[25]; 
+
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
         }
     }
 }

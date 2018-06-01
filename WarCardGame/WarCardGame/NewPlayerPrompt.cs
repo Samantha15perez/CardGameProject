@@ -38,7 +38,7 @@ namespace WarCardGame
 
         private void NewPlayerPrompt_Load(object sender, EventArgs e)
         {
-            
+            this.MaximizeBox = false;
         }
 
         private void buttonPrevForm_Click(object sender, EventArgs e)
