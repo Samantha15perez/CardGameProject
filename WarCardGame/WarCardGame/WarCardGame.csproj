@@ -141,9 +141,14 @@
     <None Include="Resources\fullbody1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Poker Small\Backface_Blue.bmp" />
     <Content Include="Resources\fullbody2.png" />
     <Content Include="Resources\fullbody3.png" />
     <Content Include="Resources\fullbody4.png" />
+    <None Include="Resources\LogoWIP22.png" />
+    <None Include="Resources\LogoWIP21.png" />
+    <None Include="Resources\LogoWIP2.png" />
+    <None Include="Resources\LogoWIP.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
