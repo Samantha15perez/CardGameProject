@@ -163,6 +163,16 @@ namespace WarCardGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PixelatedLogo {
+            get {
+                object obj = ResourceManager.GetObject("PixelatedLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RedCard_stack {
             get {
                 object obj = ResourceManager.GetObject("RedCard_stack", resourceCulture);

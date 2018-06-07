@@ -141,6 +141,7 @@
     <None Include="Resources\fullbody1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\PixelatedLogo.png" />
     <None Include="Poker Small\Backface_Blue.bmp" />
     <Content Include="Resources\fullbody2.png" />
     <Content Include="Resources\fullbody3.png" />

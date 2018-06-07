@@ -33,13 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonRandomize = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.imageListOpponent = new System.Windows.Forms.ImageList(this.components);
+            this.buttonStartGame = new System.Windows.Forms.Button();
             this.pictureBoxChar4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxChar3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxChar2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxChar1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
-            this.imageListOpponent = new System.Windows.Forms.ImageList(this.components);
-            this.buttonStartGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChar2)).BeginInit();
@@ -50,14 +50,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 21);
+            this.label1.Font = new System.Drawing.Font("Stencil", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(88, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 13);
+            this.label1.Size = new System.Drawing.Size(314, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Please choose your opponent:";
             // 
             // buttonRandomize
             // 
+            this.buttonRandomize.Font = new System.Drawing.Font("Stencil", 10F);
             this.buttonRandomize.Location = new System.Drawing.Point(298, 230);
             this.buttonRandomize.Name = "buttonRandomize";
             this.buttonRandomize.Size = new System.Drawing.Size(75, 30);
@@ -74,6 +76,26 @@
             this.label2.Size = new System.Drawing.Size(170, 30);
             this.label2.TabIndex = 4;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // imageListOpponent
+            // 
+            this.imageListOpponent.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListOpponent.ImageStream")));
+            this.imageListOpponent.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListOpponent.Images.SetKeyName(0, "op1prev.png");
+            this.imageListOpponent.Images.SetKeyName(1, "op2prev.png");
+            this.imageListOpponent.Images.SetKeyName(2, "op3prev.png");
+            this.imageListOpponent.Images.SetKeyName(3, "op4prev.png");
+            // 
+            // buttonStartGame
+            // 
+            this.buttonStartGame.Font = new System.Drawing.Font("Stencil", 10F);
+            this.buttonStartGame.Location = new System.Drawing.Point(379, 230);
+            this.buttonStartGame.Name = "buttonStartGame";
+            this.buttonStartGame.Size = new System.Drawing.Size(75, 30);
+            this.buttonStartGame.TabIndex = 5;
+            this.buttonStartGame.Text = "Start";
+            this.buttonStartGame.UseVisualStyleBackColor = true;
+            this.buttonStartGame.Click += new System.EventHandler(this.buttonStartGame_Click);
             // 
             // pictureBoxChar4
             // 
@@ -117,31 +139,11 @@
             // 
             // pictureBoxPreview
             // 
-            this.pictureBoxPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPreview.Location = new System.Drawing.Point(30, 57);
+            this.pictureBoxPreview.Location = new System.Drawing.Point(34, 57);
             this.pictureBoxPreview.Name = "pictureBoxPreview";
             this.pictureBoxPreview.Size = new System.Drawing.Size(220, 156);
             this.pictureBoxPreview.TabIndex = 1;
             this.pictureBoxPreview.TabStop = false;
-            // 
-            // imageListOpponent
-            // 
-            this.imageListOpponent.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListOpponent.ImageStream")));
-            this.imageListOpponent.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListOpponent.Images.SetKeyName(0, "op1prev.png");
-            this.imageListOpponent.Images.SetKeyName(1, "op2prev.png");
-            this.imageListOpponent.Images.SetKeyName(2, "op3prev.png");
-            this.imageListOpponent.Images.SetKeyName(3, "op4prev.png");
-            // 
-            // buttonStartGame
-            // 
-            this.buttonStartGame.Location = new System.Drawing.Point(379, 230);
-            this.buttonStartGame.Name = "buttonStartGame";
-            this.buttonStartGame.Size = new System.Drawing.Size(75, 30);
-            this.buttonStartGame.TabIndex = 5;
-            this.buttonStartGame.Text = "Start";
-            this.buttonStartGame.UseVisualStyleBackColor = true;
-            this.buttonStartGame.Click += new System.EventHandler(this.buttonStartGame_Click);
             // 
             // ChooseOpponent
             // 

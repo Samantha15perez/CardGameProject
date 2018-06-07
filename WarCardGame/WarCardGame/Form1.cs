@@ -23,6 +23,8 @@ using System.Windows.Forms;
  * 
  * 
  * save results to file
+ * endgame triggers save score; the score is the number of points won in the match, with a multiplier
+ * easy = x1, medium = x2, hard = x3, surprise = random
  * 
  * LAST- work on art;
  * opponents should have multiple sprites--
@@ -51,7 +53,7 @@ namespace WarCardGame
         public int i = 0;
         public int x = 0;
         public int PlayerCardValue;
-        public int OpponentCardValue;
+        public string OpponentCardValue;
 
 
         public Form1()
@@ -75,32 +77,33 @@ namespace WarCardGame
 
             try
             {
-                pictureBox1.Image = imageListCardsOpponent.Images[0];
-                pictureBox2.Image = imageListCardsOpponent.Images[1];
-                pictureBox3.Image = imageListCardsOpponent.Images[2];
-                pictureBox4.Image = imageListCardsOpponent.Images[3];
-                pictureBox5.Image = imageListCardsOpponent.Images[4];
-                pictureBox6.Image = imageListCardsOpponent.Images[5];
-                pictureBox7.Image = imageListCardsOpponent.Images[6];
-                pictureBox8.Image = imageListCardsOpponent.Images[7];
-                pictureBox9.Image = imageListCardsOpponent.Images[8];
-                pictureBox10.Image = imageListCardsOpponent.Images[9];
-                pictureBox11.Image = imageListCardsOpponent.Images[10];
-                pictureBox12.Image = imageListCardsOpponent.Images[11];
-                pictureBox13.Image = imageListCardsOpponent.Images[12];
-                pictureBox14.Image = imageListCardsOpponent.Images[13];
-                pictureBox15.Image = imageListCardsOpponent.Images[14];
-                pictureBox16.Image = imageListCardsOpponent.Images[15];
-                pictureBox17.Image = imageListCardsOpponent.Images[16];
-                pictureBox18.Image = imageListCardsOpponent.Images[17];
-                pictureBox19.Image = imageListCardsOpponent.Images[18];
-                pictureBox20.Image = imageListCardsOpponent.Images[19];
-                pictureBox21.Image = imageListCardsOpponent.Images[20];
-                pictureBox22.Image = imageListCardsOpponent.Images[21];
-                pictureBox23.Image = imageListCardsOpponent.Images[22];
-                pictureBox24.Image = imageListCardsOpponent.Images[23];
-                pictureBox25.Image = imageListCardsOpponent.Images[24];
-                pictureBox53.Image = imageListCardsOpponent.Images[25];
+                pictureBox1.Image = imageListCardsOpponent.Images[26];
+                pictureBox2.Image = imageListCardsOpponent.Images[26];
+                pictureBox3.Image = imageListCardsOpponent.Images[26];
+                pictureBox4.Image = imageListCardsOpponent.Images[26];
+                pictureBox5.Image = imageListCardsOpponent.Images[26];
+                pictureBox6.Image = imageListCardsOpponent.Images[26];
+                pictureBox7.Image = imageListCardsOpponent.Images[26];
+                pictureBox8.Image = imageListCardsOpponent.Images[26];
+                pictureBox9.Image = imageListCardsOpponent.Images[26];
+                pictureBox10.Image = imageListCardsOpponent.Images[26];
+                pictureBox11.Image = imageListCardsOpponent.Images[26];
+                pictureBox12.Image = imageListCardsOpponent.Images[26];
+                pictureBox13.Image = imageListCardsOpponent.Images[26];
+                pictureBox14.Image = imageListCardsOpponent.Images[26];
+                pictureBox15.Image = imageListCardsOpponent.Images[26];
+                pictureBox16.Image = imageListCardsOpponent.Images[26];
+                pictureBox17.Image = imageListCardsOpponent.Images[26];
+                pictureBox18.Image = imageListCardsOpponent.Images[26];
+                pictureBox19.Image = imageListCardsOpponent.Images[26];
+                pictureBox20.Image = imageListCardsOpponent.Images[26];
+                pictureBox21.Image = imageListCardsOpponent.Images[26];
+                pictureBox22.Image = imageListCardsOpponent.Images[26];
+                pictureBox23.Image = imageListCardsOpponent.Images[26];
+                pictureBox24.Image = imageListCardsOpponent.Images[26];
+                pictureBox25.Image = imageListCardsOpponent.Images[26];
+                pictureBox53.Image = imageListCardsOpponent.Images[26];
+                pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[26];
 
                 pictureBox2_Diamonds.Image = imageListCardsPlayer.Images[0];
                 pictureBox2_Hearts.Image = imageListCardsPlayer.Images[1];
@@ -132,36 +135,7 @@ namespace WarCardGame
                 pictureBoxPlayerPreview.BackgroundImageLayout = ImageLayout.Stretch;
                 pictureBoxOpponentPreview.BackgroundImageLayout = ImageLayout.Stretch;
 
-                if (Opponent == 3)
-                {
-                    pictureBox1.Image = imageListCardsOpponent.Images[26];
-                    pictureBox2.Image = imageListCardsOpponent.Images[26];
-                    pictureBox3.Image = imageListCardsOpponent.Images[26];
-                    pictureBox4.Image = imageListCardsOpponent.Images[26];
-                    pictureBox5.Image = imageListCardsOpponent.Images[26];
-                    pictureBox6.Image = imageListCardsOpponent.Images[26];
-                    pictureBox7.Image = imageListCardsOpponent.Images[26];
-                    pictureBox8.Image = imageListCardsOpponent.Images[26];
-                    pictureBox9.Image = imageListCardsOpponent.Images[26];
-                    pictureBox10.Image = imageListCardsOpponent.Images[26];
-                    pictureBox11.Image = imageListCardsOpponent.Images[26];
-                    pictureBox12.Image = imageListCardsOpponent.Images[26];
-                    pictureBox13.Image = imageListCardsOpponent.Images[26];
-                    pictureBox14.Image = imageListCardsOpponent.Images[26];
-                    pictureBox15.Image = imageListCardsOpponent.Images[26];
-                    pictureBox16.Image = imageListCardsOpponent.Images[26];
-                    pictureBox17.Image = imageListCardsOpponent.Images[26];
-                    pictureBox18.Image = imageListCardsOpponent.Images[26];
-                    pictureBox19.Image = imageListCardsOpponent.Images[26];
-                    pictureBox20.Image = imageListCardsOpponent.Images[26];
-                    pictureBox21.Image = imageListCardsOpponent.Images[26];
-                    pictureBox22.Image = imageListCardsOpponent.Images[26];
-                    pictureBox23.Image = imageListCardsOpponent.Images[26];
-                    pictureBox24.Image = imageListCardsOpponent.Images[26];
-                    pictureBox25.Image = imageListCardsOpponent.Images[26];
-                    pictureBox53.Image = imageListCardsOpponent.Images[26];
-                    pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[26];
-                }
+
 
             }
             catch (Exception ex)
@@ -220,12 +194,21 @@ namespace WarCardGame
             pictureBoxOpponentPreview.BackgroundImageLayout = ImageLayout.Stretch;
             label6.Text = PlayerCardValue.ToString();
 
-            //THIS IS WHAT I MESSED WITH LAST
-            OpponentCardValue = int.Parse(imageListCardsOpponent.Images.Keys[Cardpick].Substring(0, 1));
 
+           
+            OpponentCardValue = imageListCardsOpponent.Images.Keys[Cardpick].Substring(0, 1);
+            if (imageListCardsOpponent.Images.Keys[Cardpick].Substring(0, 2) == "10") { OpponentCardValue = "10"; }
+            if (OpponentCardValue == "A") { OpponentCardValue = "14"; }
+            if (OpponentCardValue == "J") { OpponentCardValue = "11"; }
+            if (OpponentCardValue == "K") { OpponentCardValue = "12"; }
+            if (OpponentCardValue == "Q") { OpponentCardValue = "13"; }
+            
 
             label5.Text = OpponentCardValue.ToString();
-            
+            if (int.Parse(OpponentCardValue) > PlayerCardValue) { label2.Text = "-" + (int.Parse(OpponentCardValue) - PlayerCardValue).ToString(); }
+            if (int.Parse(OpponentCardValue) < PlayerCardValue) { label2.Text = (PlayerCardValue - int.Parse(OpponentCardValue)).ToString(); }
+            if (int.Parse(OpponentCardValue) == PlayerCardValue) { label2.Text = "DRAW"; }
+
 
         }
 
