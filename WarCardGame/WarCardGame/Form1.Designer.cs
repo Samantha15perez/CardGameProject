@@ -41,7 +41,6 @@
             this.forfeitMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.instructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonRemoveCardTest = new System.Windows.Forms.Button();
             this.pictureBox2_Diamonds = new System.Windows.Forms.PictureBox();
             this.pictureBox2_Hearts = new System.Windows.Forms.PictureBox();
             this.pictureBox3_Diamonds = new System.Windows.Forms.PictureBox();
@@ -103,6 +102,32 @@
             this.SelectCardTest = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox2_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBox3_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox3_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBox34_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox4_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBox6_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox6_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBox7_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox7_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBox8_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox8_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBox9_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox9_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBox10_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox10_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAce_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAce_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBoxJack_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBoxJack_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBoxKing_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBoxKing_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBoxQueen_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBoxQueen_Spades = new System.Windows.Forms.PictureBox();
+            this.pictureBox5_Clubs = new System.Windows.Forms.PictureBox();
+            this.pictureBox5_Spades = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponent)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -161,6 +186,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponentPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayerPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAce_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAce_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxJack_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxJack_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKing_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKing_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQueen_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQueen_Spades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5_Clubs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5_Spades)).BeginInit();
             this.SuspendLayout();
             // 
             // imageListCardDeck
@@ -352,16 +403,6 @@
             this.howToPlayToolStripMenuItem.Text = "How to play";
             this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
             // 
-            // buttonRemoveCardTest
-            // 
-            this.buttonRemoveCardTest.Location = new System.Drawing.Point(657, 1);
-            this.buttonRemoveCardTest.Name = "buttonRemoveCardTest";
-            this.buttonRemoveCardTest.Size = new System.Drawing.Size(86, 22);
-            this.buttonRemoveCardTest.TabIndex = 6;
-            this.buttonRemoveCardTest.Text = "PickCardTest";
-            this.buttonRemoveCardTest.UseVisualStyleBackColor = true;
-            this.buttonRemoveCardTest.Click += new System.EventHandler(this.buttonRemoveCardTest_Click);
-            // 
             // pictureBox2_Diamonds
             // 
             this.pictureBox2_Diamonds.Location = new System.Drawing.Point(57, 433);
@@ -373,7 +414,7 @@
             // 
             // pictureBox2_Hearts
             // 
-            this.pictureBox2_Hearts.Location = new System.Drawing.Point(57, 510);
+            this.pictureBox2_Hearts.Location = new System.Drawing.Point(57, 462);
             this.pictureBox2_Hearts.Name = "pictureBox2_Hearts";
             this.pictureBox2_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox2_Hearts.TabIndex = 7;
@@ -391,7 +432,7 @@
             // 
             // pictureBox3_Hearts
             // 
-            this.pictureBox3_Hearts.Location = new System.Drawing.Point(113, 509);
+            this.pictureBox3_Hearts.Location = new System.Drawing.Point(113, 462);
             this.pictureBox3_Hearts.Name = "pictureBox3_Hearts";
             this.pictureBox3_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox3_Hearts.TabIndex = 7;
@@ -409,7 +450,7 @@
             // 
             // pictureBox4_Hearts
             // 
-            this.pictureBox4_Hearts.Location = new System.Drawing.Point(169, 510);
+            this.pictureBox4_Hearts.Location = new System.Drawing.Point(169, 462);
             this.pictureBox4_Hearts.Name = "pictureBox4_Hearts";
             this.pictureBox4_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox4_Hearts.TabIndex = 7;
@@ -427,7 +468,7 @@
             // 
             // pictureBox5_Hearts
             // 
-            this.pictureBox5_Hearts.Location = new System.Drawing.Point(225, 509);
+            this.pictureBox5_Hearts.Location = new System.Drawing.Point(225, 461);
             this.pictureBox5_Hearts.Name = "pictureBox5_Hearts";
             this.pictureBox5_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox5_Hearts.TabIndex = 7;
@@ -445,7 +486,7 @@
             // 
             // pictureBox6_Hearts
             // 
-            this.pictureBox6_Hearts.Location = new System.Drawing.Point(281, 510);
+            this.pictureBox6_Hearts.Location = new System.Drawing.Point(281, 462);
             this.pictureBox6_Hearts.Name = "pictureBox6_Hearts";
             this.pictureBox6_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox6_Hearts.TabIndex = 7;
@@ -463,7 +504,7 @@
             // 
             // pictureBox7_Hearts
             // 
-            this.pictureBox7_Hearts.Location = new System.Drawing.Point(337, 510);
+            this.pictureBox7_Hearts.Location = new System.Drawing.Point(337, 462);
             this.pictureBox7_Hearts.Name = "pictureBox7_Hearts";
             this.pictureBox7_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox7_Hearts.TabIndex = 7;
@@ -481,7 +522,7 @@
             // 
             // pictureBox8_Hearts
             // 
-            this.pictureBox8_Hearts.Location = new System.Drawing.Point(393, 510);
+            this.pictureBox8_Hearts.Location = new System.Drawing.Point(393, 462);
             this.pictureBox8_Hearts.Name = "pictureBox8_Hearts";
             this.pictureBox8_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox8_Hearts.TabIndex = 7;
@@ -499,7 +540,7 @@
             // 
             // pictureBox9_Hearts
             // 
-            this.pictureBox9_Hearts.Location = new System.Drawing.Point(449, 509);
+            this.pictureBox9_Hearts.Location = new System.Drawing.Point(449, 461);
             this.pictureBox9_Hearts.Name = "pictureBox9_Hearts";
             this.pictureBox9_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox9_Hearts.TabIndex = 7;
@@ -517,7 +558,7 @@
             // 
             // pictureBox10_Hearts
             // 
-            this.pictureBox10_Hearts.Location = new System.Drawing.Point(505, 509);
+            this.pictureBox10_Hearts.Location = new System.Drawing.Point(505, 461);
             this.pictureBox10_Hearts.Name = "pictureBox10_Hearts";
             this.pictureBox10_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBox10_Hearts.TabIndex = 7;
@@ -535,7 +576,7 @@
             // 
             // pictureBoxAce_Hearts
             // 
-            this.pictureBoxAce_Hearts.Location = new System.Drawing.Point(561, 509);
+            this.pictureBoxAce_Hearts.Location = new System.Drawing.Point(561, 461);
             this.pictureBoxAce_Hearts.Name = "pictureBoxAce_Hearts";
             this.pictureBoxAce_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBoxAce_Hearts.TabIndex = 7;
@@ -553,7 +594,7 @@
             // 
             // pictureBoxJack_Hearts
             // 
-            this.pictureBoxJack_Hearts.Location = new System.Drawing.Point(617, 509);
+            this.pictureBoxJack_Hearts.Location = new System.Drawing.Point(617, 461);
             this.pictureBoxJack_Hearts.Name = "pictureBoxJack_Hearts";
             this.pictureBoxJack_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBoxJack_Hearts.TabIndex = 7;
@@ -571,7 +612,7 @@
             // 
             // pictureBoxKing_Hearts
             // 
-            this.pictureBoxKing_Hearts.Location = new System.Drawing.Point(673, 509);
+            this.pictureBoxKing_Hearts.Location = new System.Drawing.Point(673, 461);
             this.pictureBoxKing_Hearts.Name = "pictureBoxKing_Hearts";
             this.pictureBoxKing_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBoxKing_Hearts.TabIndex = 7;
@@ -589,7 +630,7 @@
             // 
             // pictureBoxQueen_Hearts
             // 
-            this.pictureBoxQueen_Hearts.Location = new System.Drawing.Point(729, 509);
+            this.pictureBoxQueen_Hearts.Location = new System.Drawing.Point(729, 461);
             this.pictureBoxQueen_Hearts.Name = "pictureBoxQueen_Hearts";
             this.pictureBoxQueen_Hearts.Size = new System.Drawing.Size(50, 70);
             this.pictureBoxQueen_Hearts.TabIndex = 7;
@@ -873,7 +914,6 @@
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "VALUE:  ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -884,12 +924,275 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "VALUE:  ";
             // 
+            // pictureBox2_Clubs
+            // 
+            this.pictureBox2_Clubs.Location = new System.Drawing.Point(57, 490);
+            this.pictureBox2_Clubs.Name = "pictureBox2_Clubs";
+            this.pictureBox2_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox2_Clubs.TabIndex = 7;
+            this.pictureBox2_Clubs.TabStop = false;
+            this.pictureBox2_Clubs.Visible = false;
+            this.pictureBox2_Clubs.Click += new System.EventHandler(this.pictureBox2_Hearts_Click);
+            // 
+            // pictureBox2_Spades
+            // 
+            this.pictureBox2_Spades.Location = new System.Drawing.Point(57, 517);
+            this.pictureBox2_Spades.Name = "pictureBox2_Spades";
+            this.pictureBox2_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox2_Spades.TabIndex = 7;
+            this.pictureBox2_Spades.TabStop = false;
+            this.pictureBox2_Spades.Visible = false;
+            this.pictureBox2_Spades.Click += new System.EventHandler(this.pictureBox2_Hearts_Click);
+            // 
+            // pictureBox3_Clubs
+            // 
+            this.pictureBox3_Clubs.Location = new System.Drawing.Point(113, 490);
+            this.pictureBox3_Clubs.Name = "pictureBox3_Clubs";
+            this.pictureBox3_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox3_Clubs.TabIndex = 7;
+            this.pictureBox3_Clubs.TabStop = false;
+            this.pictureBox3_Clubs.Visible = false;
+            this.pictureBox3_Clubs.Click += new System.EventHandler(this.pictureBox3_Hearts_Click);
+            // 
+            // pictureBox3_Spades
+            // 
+            this.pictureBox3_Spades.Location = new System.Drawing.Point(113, 517);
+            this.pictureBox3_Spades.Name = "pictureBox3_Spades";
+            this.pictureBox3_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox3_Spades.TabIndex = 7;
+            this.pictureBox3_Spades.TabStop = false;
+            this.pictureBox3_Spades.Visible = false;
+            this.pictureBox3_Spades.Click += new System.EventHandler(this.pictureBox3_Hearts_Click);
+            // 
+            // pictureBox34_Clubs
+            // 
+            this.pictureBox34_Clubs.Location = new System.Drawing.Point(169, 490);
+            this.pictureBox34_Clubs.Name = "pictureBox34_Clubs";
+            this.pictureBox34_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox34_Clubs.TabIndex = 7;
+            this.pictureBox34_Clubs.TabStop = false;
+            this.pictureBox34_Clubs.Visible = false;
+            this.pictureBox34_Clubs.Click += new System.EventHandler(this.pictureBox4_Hearts_Click);
+            // 
+            // pictureBox4_Spades
+            // 
+            this.pictureBox4_Spades.Location = new System.Drawing.Point(169, 517);
+            this.pictureBox4_Spades.Name = "pictureBox4_Spades";
+            this.pictureBox4_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox4_Spades.TabIndex = 7;
+            this.pictureBox4_Spades.TabStop = false;
+            this.pictureBox4_Spades.Visible = false;
+            this.pictureBox4_Spades.Click += new System.EventHandler(this.pictureBox4_Hearts_Click);
+            // 
+            // pictureBox6_Clubs
+            // 
+            this.pictureBox6_Clubs.Location = new System.Drawing.Point(281, 490);
+            this.pictureBox6_Clubs.Name = "pictureBox6_Clubs";
+            this.pictureBox6_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox6_Clubs.TabIndex = 7;
+            this.pictureBox6_Clubs.TabStop = false;
+            this.pictureBox6_Clubs.Visible = false;
+            this.pictureBox6_Clubs.Click += new System.EventHandler(this.pictureBox6_Hearts_Click);
+            // 
+            // pictureBox6_Spades
+            // 
+            this.pictureBox6_Spades.Location = new System.Drawing.Point(281, 517);
+            this.pictureBox6_Spades.Name = "pictureBox6_Spades";
+            this.pictureBox6_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox6_Spades.TabIndex = 7;
+            this.pictureBox6_Spades.TabStop = false;
+            this.pictureBox6_Spades.Visible = false;
+            this.pictureBox6_Spades.Click += new System.EventHandler(this.pictureBox6_Hearts_Click);
+            // 
+            // pictureBox7_Clubs
+            // 
+            this.pictureBox7_Clubs.Location = new System.Drawing.Point(337, 490);
+            this.pictureBox7_Clubs.Name = "pictureBox7_Clubs";
+            this.pictureBox7_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox7_Clubs.TabIndex = 7;
+            this.pictureBox7_Clubs.TabStop = false;
+            this.pictureBox7_Clubs.Visible = false;
+            this.pictureBox7_Clubs.Click += new System.EventHandler(this.pictureBox7_Hearts_Click);
+            // 
+            // pictureBox7_Spades
+            // 
+            this.pictureBox7_Spades.Location = new System.Drawing.Point(337, 517);
+            this.pictureBox7_Spades.Name = "pictureBox7_Spades";
+            this.pictureBox7_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox7_Spades.TabIndex = 7;
+            this.pictureBox7_Spades.TabStop = false;
+            this.pictureBox7_Spades.Visible = false;
+            this.pictureBox7_Spades.Click += new System.EventHandler(this.pictureBox7_Hearts_Click);
+            // 
+            // pictureBox8_Clubs
+            // 
+            this.pictureBox8_Clubs.Location = new System.Drawing.Point(393, 490);
+            this.pictureBox8_Clubs.Name = "pictureBox8_Clubs";
+            this.pictureBox8_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox8_Clubs.TabIndex = 7;
+            this.pictureBox8_Clubs.TabStop = false;
+            this.pictureBox8_Clubs.Visible = false;
+            this.pictureBox8_Clubs.Click += new System.EventHandler(this.pictureBox8_Hearts_Click);
+            // 
+            // pictureBox8_Spades
+            // 
+            this.pictureBox8_Spades.Location = new System.Drawing.Point(393, 517);
+            this.pictureBox8_Spades.Name = "pictureBox8_Spades";
+            this.pictureBox8_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox8_Spades.TabIndex = 7;
+            this.pictureBox8_Spades.TabStop = false;
+            this.pictureBox8_Spades.Visible = false;
+            this.pictureBox8_Spades.Click += new System.EventHandler(this.pictureBox8_Hearts_Click);
+            // 
+            // pictureBox9_Clubs
+            // 
+            this.pictureBox9_Clubs.Location = new System.Drawing.Point(449, 489);
+            this.pictureBox9_Clubs.Name = "pictureBox9_Clubs";
+            this.pictureBox9_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox9_Clubs.TabIndex = 7;
+            this.pictureBox9_Clubs.TabStop = false;
+            this.pictureBox9_Clubs.Visible = false;
+            this.pictureBox9_Clubs.Click += new System.EventHandler(this.pictureBox9_Hearts_Click);
+            // 
+            // pictureBox9_Spades
+            // 
+            this.pictureBox9_Spades.Location = new System.Drawing.Point(449, 516);
+            this.pictureBox9_Spades.Name = "pictureBox9_Spades";
+            this.pictureBox9_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox9_Spades.TabIndex = 7;
+            this.pictureBox9_Spades.TabStop = false;
+            this.pictureBox9_Spades.Visible = false;
+            this.pictureBox9_Spades.Click += new System.EventHandler(this.pictureBox9_Hearts_Click);
+            // 
+            // pictureBox10_Clubs
+            // 
+            this.pictureBox10_Clubs.Location = new System.Drawing.Point(505, 489);
+            this.pictureBox10_Clubs.Name = "pictureBox10_Clubs";
+            this.pictureBox10_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox10_Clubs.TabIndex = 7;
+            this.pictureBox10_Clubs.TabStop = false;
+            this.pictureBox10_Clubs.Visible = false;
+            this.pictureBox10_Clubs.Click += new System.EventHandler(this.pictureBox10_Hearts_Click);
+            // 
+            // pictureBox10_Spades
+            // 
+            this.pictureBox10_Spades.Location = new System.Drawing.Point(505, 516);
+            this.pictureBox10_Spades.Name = "pictureBox10_Spades";
+            this.pictureBox10_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox10_Spades.TabIndex = 7;
+            this.pictureBox10_Spades.TabStop = false;
+            this.pictureBox10_Spades.Visible = false;
+            this.pictureBox10_Spades.Click += new System.EventHandler(this.pictureBox10_Hearts_Click);
+            // 
+            // pictureBoxAce_Clubs
+            // 
+            this.pictureBoxAce_Clubs.Location = new System.Drawing.Point(561, 489);
+            this.pictureBoxAce_Clubs.Name = "pictureBoxAce_Clubs";
+            this.pictureBoxAce_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBoxAce_Clubs.TabIndex = 7;
+            this.pictureBoxAce_Clubs.TabStop = false;
+            this.pictureBoxAce_Clubs.Visible = false;
+            this.pictureBoxAce_Clubs.Click += new System.EventHandler(this.pictureBoxAce_Hearts_Click);
+            // 
+            // pictureBoxAce_Spades
+            // 
+            this.pictureBoxAce_Spades.Location = new System.Drawing.Point(561, 516);
+            this.pictureBoxAce_Spades.Name = "pictureBoxAce_Spades";
+            this.pictureBoxAce_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBoxAce_Spades.TabIndex = 7;
+            this.pictureBoxAce_Spades.TabStop = false;
+            this.pictureBoxAce_Spades.Visible = false;
+            this.pictureBoxAce_Spades.Click += new System.EventHandler(this.pictureBoxAce_Hearts_Click);
+            // 
+            // pictureBoxJack_Clubs
+            // 
+            this.pictureBoxJack_Clubs.Location = new System.Drawing.Point(617, 489);
+            this.pictureBoxJack_Clubs.Name = "pictureBoxJack_Clubs";
+            this.pictureBoxJack_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBoxJack_Clubs.TabIndex = 7;
+            this.pictureBoxJack_Clubs.TabStop = false;
+            this.pictureBoxJack_Clubs.Visible = false;
+            this.pictureBoxJack_Clubs.Click += new System.EventHandler(this.pictureBoxJack_Hearts_Click);
+            // 
+            // pictureBoxJack_Spades
+            // 
+            this.pictureBoxJack_Spades.Location = new System.Drawing.Point(617, 516);
+            this.pictureBoxJack_Spades.Name = "pictureBoxJack_Spades";
+            this.pictureBoxJack_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBoxJack_Spades.TabIndex = 7;
+            this.pictureBoxJack_Spades.TabStop = false;
+            this.pictureBoxJack_Spades.Visible = false;
+            this.pictureBoxJack_Spades.Click += new System.EventHandler(this.pictureBoxJack_Hearts_Click);
+            // 
+            // pictureBoxKing_Clubs
+            // 
+            this.pictureBoxKing_Clubs.Location = new System.Drawing.Point(673, 489);
+            this.pictureBoxKing_Clubs.Name = "pictureBoxKing_Clubs";
+            this.pictureBoxKing_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBoxKing_Clubs.TabIndex = 7;
+            this.pictureBoxKing_Clubs.TabStop = false;
+            this.pictureBoxKing_Clubs.Visible = false;
+            this.pictureBoxKing_Clubs.Click += new System.EventHandler(this.pictureBoxKing_Hearts_Click);
+            // 
+            // pictureBoxKing_Spades
+            // 
+            this.pictureBoxKing_Spades.Location = new System.Drawing.Point(673, 516);
+            this.pictureBoxKing_Spades.Name = "pictureBoxKing_Spades";
+            this.pictureBoxKing_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBoxKing_Spades.TabIndex = 7;
+            this.pictureBoxKing_Spades.TabStop = false;
+            this.pictureBoxKing_Spades.Visible = false;
+            this.pictureBoxKing_Spades.Click += new System.EventHandler(this.pictureBoxKing_Hearts_Click);
+            // 
+            // pictureBoxQueen_Clubs
+            // 
+            this.pictureBoxQueen_Clubs.Location = new System.Drawing.Point(729, 489);
+            this.pictureBoxQueen_Clubs.Name = "pictureBoxQueen_Clubs";
+            this.pictureBoxQueen_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBoxQueen_Clubs.TabIndex = 7;
+            this.pictureBoxQueen_Clubs.TabStop = false;
+            this.pictureBoxQueen_Clubs.Visible = false;
+            this.pictureBoxQueen_Clubs.Click += new System.EventHandler(this.pictureBoxQueen_Hearts_Click);
+            // 
+            // pictureBoxQueen_Spades
+            // 
+            this.pictureBoxQueen_Spades.Location = new System.Drawing.Point(729, 516);
+            this.pictureBoxQueen_Spades.Name = "pictureBoxQueen_Spades";
+            this.pictureBoxQueen_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBoxQueen_Spades.TabIndex = 7;
+            this.pictureBoxQueen_Spades.TabStop = false;
+            this.pictureBoxQueen_Spades.Visible = false;
+            this.pictureBoxQueen_Spades.Click += new System.EventHandler(this.pictureBoxQueen_Hearts_Click);
+            // 
+            // pictureBox5_Clubs
+            // 
+            this.pictureBox5_Clubs.Location = new System.Drawing.Point(225, 489);
+            this.pictureBox5_Clubs.Name = "pictureBox5_Clubs";
+            this.pictureBox5_Clubs.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox5_Clubs.TabIndex = 7;
+            this.pictureBox5_Clubs.TabStop = false;
+            this.pictureBox5_Clubs.Visible = false;
+            this.pictureBox5_Clubs.Click += new System.EventHandler(this.pictureBox5_Diamonds_Click);
+            // 
+            // pictureBox5_Spades
+            // 
+            this.pictureBox5_Spades.Location = new System.Drawing.Point(225, 516);
+            this.pictureBox5_Spades.Name = "pictureBox5_Spades";
+            this.pictureBox5_Spades.Size = new System.Drawing.Size(50, 70);
+            this.pictureBox5_Spades.TabIndex = 7;
+            this.pictureBox5_Spades.TabStop = false;
+            this.pictureBox5_Spades.Visible = false;
+            this.pictureBox5_Spades.Click += new System.EventHandler(this.pictureBox5_Diamonds_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WarCardGame.Properties.Resources.table2;
             this.ClientSize = new System.Drawing.Size(799, 598);
+            this.Controls.Add(this.pictureBox5_Spades);
+            this.Controls.Add(this.pictureBox5_Clubs);
+            this.Controls.Add(this.pictureBox5_Hearts);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SelectCardTest);
@@ -899,38 +1202,56 @@
             this.Controls.Add(this.pictureBoxOpponentPreview);
             this.Controls.Add(this.pictureBox53);
             this.Controls.Add(this.pictureBox25);
+            this.Controls.Add(this.pictureBoxQueen_Spades);
+            this.Controls.Add(this.pictureBoxQueen_Clubs);
             this.Controls.Add(this.pictureBoxQueen_Hearts);
             this.Controls.Add(this.pictureBox24);
             this.Controls.Add(this.pictureBoxQueen_Diamonds);
+            this.Controls.Add(this.pictureBoxKing_Spades);
             this.Controls.Add(this.pictureBox23);
+            this.Controls.Add(this.pictureBoxKing_Clubs);
             this.Controls.Add(this.pictureBoxKing_Hearts);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.pictureBoxKing_Diamonds);
+            this.Controls.Add(this.pictureBoxJack_Spades);
             this.Controls.Add(this.pictureBox21);
+            this.Controls.Add(this.pictureBoxJack_Clubs);
             this.Controls.Add(this.pictureBoxJack_Hearts);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBoxJack_Diamonds);
+            this.Controls.Add(this.pictureBoxAce_Spades);
             this.Controls.Add(this.pictureBox19);
+            this.Controls.Add(this.pictureBoxAce_Clubs);
             this.Controls.Add(this.pictureBoxAce_Hearts);
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.pictureBoxAce_Diamonds);
+            this.Controls.Add(this.pictureBox10_Spades);
             this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.pictureBox10_Clubs);
             this.Controls.Add(this.pictureBox10_Hearts);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox10_Diamonds);
+            this.Controls.Add(this.pictureBox9_Spades);
             this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.pictureBox9_Clubs);
             this.Controls.Add(this.pictureBox9_Hearts);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox9_Diamonds);
+            this.Controls.Add(this.pictureBox8_Spades);
             this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox8_Clubs);
             this.Controls.Add(this.pictureBox8_Hearts);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox8_Diamonds);
+            this.Controls.Add(this.pictureBox7_Spades);
             this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox7_Clubs);
             this.Controls.Add(this.pictureBox7_Hearts);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox7_Diamonds);
+            this.Controls.Add(this.pictureBox6_Spades);
             this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox6_Clubs);
             this.Controls.Add(this.pictureBox6_Hearts);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox6_Diamonds);
@@ -938,19 +1259,23 @@
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox5_Diamonds);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5_Hearts);
+            this.Controls.Add(this.pictureBox4_Spades);
             this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox34_Clubs);
             this.Controls.Add(this.pictureBox4_Hearts);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox4_Diamonds);
+            this.Controls.Add(this.pictureBox3_Spades);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox3_Clubs);
             this.Controls.Add(this.pictureBox3_Hearts);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3_Diamonds);
+            this.Controls.Add(this.pictureBox2_Spades);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2_Clubs);
             this.Controls.Add(this.pictureBox2_Hearts);
             this.Controls.Add(this.pictureBox2_Diamonds);
-            this.Controls.Add(this.buttonRemoveCardTest);
             this.Controls.Add(this.pictureBoxOpponent);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -1022,6 +1347,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponentPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayerPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAce_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAce_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxJack_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxJack_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKing_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKing_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQueen_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQueen_Spades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5_Clubs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5_Spades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1038,7 +1389,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem forfeitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forfeitMatchToolStripMenuItem;
-        private System.Windows.Forms.Button buttonRemoveCardTest;
         private System.Windows.Forms.PictureBox pictureBox2_Diamonds;
         private System.Windows.Forms.PictureBox pictureBox2_Hearts;
         private System.Windows.Forms.PictureBox pictureBox3_Diamonds;
@@ -1102,6 +1452,32 @@
         private System.Windows.Forms.Button SelectCardTest;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox2_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox2_Spades;
+        private System.Windows.Forms.PictureBox pictureBox3_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox3_Spades;
+        private System.Windows.Forms.PictureBox pictureBox34_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox4_Spades;
+        private System.Windows.Forms.PictureBox pictureBox6_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox6_Spades;
+        private System.Windows.Forms.PictureBox pictureBox7_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox7_Spades;
+        private System.Windows.Forms.PictureBox pictureBox8_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox8_Spades;
+        private System.Windows.Forms.PictureBox pictureBox9_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox9_Spades;
+        private System.Windows.Forms.PictureBox pictureBox10_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox10_Spades;
+        private System.Windows.Forms.PictureBox pictureBoxAce_Clubs;
+        private System.Windows.Forms.PictureBox pictureBoxAce_Spades;
+        private System.Windows.Forms.PictureBox pictureBoxJack_Clubs;
+        private System.Windows.Forms.PictureBox pictureBoxJack_Spades;
+        private System.Windows.Forms.PictureBox pictureBoxKing_Clubs;
+        private System.Windows.Forms.PictureBox pictureBoxKing_Spades;
+        private System.Windows.Forms.PictureBox pictureBoxQueen_Clubs;
+        private System.Windows.Forms.PictureBox pictureBoxQueen_Spades;
+        private System.Windows.Forms.PictureBox pictureBox5_Clubs;
+        private System.Windows.Forms.PictureBox pictureBox5_Spades;
     }
 }
 

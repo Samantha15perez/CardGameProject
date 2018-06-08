@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 /* things left to do:
  * 
- * assign a value to every card
+ * assign a value to every card --DONE
  * create "turns"
  * create a method to have your 'opponent' pick a card --DONE
  *      (the opponent you choose will determine which cards you will fight against)
  * check both card values against each other and choose a winner
  *  for every card won, a picturebox containing a face-down card is stacked
  *  for the illusion of a growing "winnings" pile
+ *  -EDIT- actually put the won cards into the player's deck
  *  
  * card value depends on the actual image name within the image list//OR the picturebox itself
+ * (NOT HARDCODED) --DONE
  * 
  * 
  * 
@@ -54,6 +56,9 @@ namespace WarCardGame
         public int x = 0;
         public int PlayerCardValue;
         public string OpponentCardValue;
+        public int OpponentDeckLength = 26;
+        public int PlayerDeckLength = 0;
+
 
 
         public Form1()
@@ -66,74 +71,113 @@ namespace WarCardGame
         private void Form1_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
+            //makes the window unable to be resized
             
             label1.Text = PlayerName;
-            if (Opponent == 0) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody11.png"; }
-            if (Opponent == 1) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody2.png"; }
-            if (Opponent == 2) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody3.png"; }
-            if (Opponent == 3) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\Fullbody4.png"; }
+            //shows the playername! 
+
+            if (Opponent == 0) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\WarCardGame\WarCardGame\Resources\fullbody11.png"; }
+            if (Opponent == 1) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\WarCardGame\WarCardGame\Resources\Fullbody2.png"; }
+            if (Opponent == 2) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\WarCardGame\WarCardGame\Resources\Fullbody3.png"; }
+            if (Opponent == 3) { pictureBoxOpponent.ImageLocation = @"C:\Users\Cyberadmin\Desktop\CardGameProject\WarCardGame\WarCardGame\Resources\Fullbody4.png"; }
+            //loads in the opponent you chose before. 
 
             pictureBoxOpponent.BackgroundImageLayout = ImageLayout.None;
+            //sets the image alignment so it doesnt look stretched and gross
 
             try
             {
-                pictureBox1.Image = imageListCardsOpponent.Images[26];
-                pictureBox2.Image = imageListCardsOpponent.Images[26];
-                pictureBox3.Image = imageListCardsOpponent.Images[26];
-                pictureBox4.Image = imageListCardsOpponent.Images[26];
-                pictureBox5.Image = imageListCardsOpponent.Images[26];
-                pictureBox6.Image = imageListCardsOpponent.Images[26];
-                pictureBox7.Image = imageListCardsOpponent.Images[26];
-                pictureBox8.Image = imageListCardsOpponent.Images[26];
-                pictureBox9.Image = imageListCardsOpponent.Images[26];
-                pictureBox10.Image = imageListCardsOpponent.Images[26];
-                pictureBox11.Image = imageListCardsOpponent.Images[26];
-                pictureBox12.Image = imageListCardsOpponent.Images[26];
-                pictureBox13.Image = imageListCardsOpponent.Images[26];
-                pictureBox14.Image = imageListCardsOpponent.Images[26];
-                pictureBox15.Image = imageListCardsOpponent.Images[26];
-                pictureBox16.Image = imageListCardsOpponent.Images[26];
-                pictureBox17.Image = imageListCardsOpponent.Images[26];
-                pictureBox18.Image = imageListCardsOpponent.Images[26];
-                pictureBox19.Image = imageListCardsOpponent.Images[26];
-                pictureBox20.Image = imageListCardsOpponent.Images[26];
-                pictureBox21.Image = imageListCardsOpponent.Images[26];
-                pictureBox22.Image = imageListCardsOpponent.Images[26];
-                pictureBox23.Image = imageListCardsOpponent.Images[26];
-                pictureBox24.Image = imageListCardsOpponent.Images[26];
-                pictureBox25.Image = imageListCardsOpponent.Images[26];
-                pictureBox53.Image = imageListCardsOpponent.Images[26];
-                pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[26];
+                pictureBox1.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox2.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox3.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox4.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox5.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox6.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox7.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox8.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox9.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox10.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox11.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox12.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox13.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox14.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox15.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox16.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox17.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox18.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox19.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox20.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox21.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox22.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox23.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox24.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox25.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                pictureBox53.Image = imageListCardsOpponent.Images[OpponentDeckLength];
+                //shows your opponent's deck facedown
 
-                pictureBox2_Diamonds.Image = imageListCardsPlayer.Images[0];
-                pictureBox2_Hearts.Image = imageListCardsPlayer.Images[1];
-                pictureBox3_Diamonds.Image = imageListCardsPlayer.Images[2];
-                pictureBox3_Hearts.Image = imageListCardsPlayer.Images[3];
-                pictureBox4_Diamonds.Image = imageListCardsPlayer.Images[4];
-                pictureBox4_Hearts.Image = imageListCardsPlayer.Images[5];
-                pictureBox5_Diamonds.Image = imageListCardsPlayer.Images[6];
-                pictureBox5_Hearts.Image = imageListCardsPlayer.Images[7];
-                pictureBox6_Diamonds.Image = imageListCardsPlayer.Images[8];
-                pictureBox6_Hearts.Image = imageListCardsPlayer.Images[9];
-                pictureBox7_Diamonds.Image = imageListCardsPlayer.Images[10];
-                pictureBox7_Hearts.Image = imageListCardsPlayer.Images[11];
-                pictureBox8_Diamonds.Image = imageListCardsPlayer.Images[12];
-                pictureBox8_Hearts.Image = imageListCardsPlayer.Images[13];
-                pictureBox9_Diamonds.Image = imageListCardsPlayer.Images[14];
-                pictureBox9_Hearts.Image = imageListCardsPlayer.Images[15];
-                pictureBox10_Diamonds.Image = imageListCardsPlayer.Images[16];
-                pictureBox10_Hearts.Image = imageListCardsPlayer.Images[17];
-                pictureBoxAce_Diamonds.Image = imageListCardsPlayer.Images[18];
-                pictureBoxAce_Hearts.Image = imageListCardsPlayer.Images[19];
-                pictureBoxJack_Diamonds.Image = imageListCardsPlayer.Images[20];
-                pictureBoxJack_Hearts.Image = imageListCardsPlayer.Images[21];
-                pictureBoxKing_Diamonds.Image = imageListCardsPlayer.Images[22];
-                pictureBoxKing_Hearts.Image = imageListCardsPlayer.Images[23];
-                pictureBoxQueen_Diamonds.Image = imageListCardsPlayer.Images[24];
-                pictureBoxQueen_Hearts.Image = imageListCardsPlayer.Images[25];
-                pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[26];
+                pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[OpponentDeckLength];
+                //hides your opponent's choice until you select your card (no cheating!)
+
+                pictureBox2_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox2_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox3_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox3_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox4_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox4_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox5_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox5_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox6_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox6_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox7_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox7_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox8_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox8_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox9_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox9_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox10_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBox10_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBoxAce_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBoxAce_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBoxJack_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBoxJack_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBoxKing_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBoxKing_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBoxQueen_Diamonds.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                PlayerDeckLength++;
+                pictureBoxQueen_Hearts.Image = imageListCardsPlayer.Images[PlayerDeckLength];
+                
+                //sets up your deck in front of you
+
+
+                //pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[CardDeckLength];
+
                 pictureBoxPlayerPreview.BackgroundImageLayout = ImageLayout.Stretch;
                 pictureBoxOpponentPreview.BackgroundImageLayout = ImageLayout.Stretch;
+                //makes it look all pretty and un-jpg-d
 
 
 
@@ -141,13 +185,8 @@ namespace WarCardGame
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                //error handling; because what are we, savages?
             }
-
-            Random rand = new Random(DateTime.Now.Millisecond);
-            int Cardpick = rand.Next(0, 51);
-            
-
-                
             }
 
 
@@ -155,9 +194,8 @@ namespace WarCardGame
         private void forfeitMatchToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             QuitPrompt q1 = new QuitPrompt();
-
             q1.ShowDialog();
-
+            //this pauses the game and pulls up the "are you sure you want to quit?" dialog
             
         }
 
@@ -168,19 +206,12 @@ namespace WarCardGame
 
         }
 
-        private void buttonRemoveCardTest_Click(object sender, EventArgs e)
-        {
-            Random rand = new Random(DateTime.Now.Millisecond);
-            int Cardpick = rand.Next(0, 26);
-            MessageBox.Show(imageListCardsOpponent.Images.Keys[Cardpick].ToString());
 
-
-
-        }
 
         private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Instructions will be included soon");
+            //placeholder for instructions. full instructions will be placed here.
         }
 
         
@@ -188,12 +219,32 @@ namespace WarCardGame
         private void SelectCardTest_Click(object sender, EventArgs e)
         {
             Random rand = new Random(DateTime.Now.Millisecond);
-            int Cardpick = rand.Next(0, 26);
-            pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[Cardpick];
+            int Cardpick = rand.Next(0, OpponentDeckLength);
+            //selects a card for your opponent to play
             
-            pictureBoxOpponentPreview.BackgroundImageLayout = ImageLayout.Stretch;
-            label6.Text = PlayerCardValue.ToString();
+            if (imageListCardsOpponent.Images[Cardpick] == imageListCardsOpponent.Images[OpponentDeckLength])
+            {
+              Cardpick = rand.Next(0, OpponentDeckLength);
+                //chooses a new card if it lands on the facedown; which is the last card in the image list. 
+            }
+            else if (!(imageListCardsOpponent.Images[Cardpick] == imageListCardsOpponent.Images[OpponentDeckLength]))
+            {
+              pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[Cardpick];
+                //shows the true card
+            }
+            if (OpponentDeckLength == 1)
+            {
+                MessageBox.Show("WIN");
+                //if the only image within the imagelist is the facedown card, that means there are no cards left in 
+                //your opponent's deck, and you win!
+            }
 
+
+
+            pictureBoxOpponentPreview.BackgroundImageLayout = ImageLayout.Stretch;
+
+            label6.Text = PlayerCardValue.ToString();
+            //test label. will be deleted later.
 
            
             OpponentCardValue = imageListCardsOpponent.Images.Keys[Cardpick].Substring(0, 1);
@@ -202,13 +253,65 @@ namespace WarCardGame
             if (OpponentCardValue == "J") { OpponentCardValue = "11"; }
             if (OpponentCardValue == "K") { OpponentCardValue = "12"; }
             if (OpponentCardValue == "Q") { OpponentCardValue = "13"; }
-            
+            //this snippet of code takes the keys of the card images and uses the substring method
+            //to calculate a value for the card instead of hardcoding it. 
+            //(for example- 2 of clubs -> 2_Clubs.bmp -> [2]_Clubs.bmp -> value = 2)
+
 
             label5.Text = OpponentCardValue.ToString();
-            if (int.Parse(OpponentCardValue) > PlayerCardValue) { label2.Text = "-" + (int.Parse(OpponentCardValue) - PlayerCardValue).ToString(); }
-            if (int.Parse(OpponentCardValue) < PlayerCardValue) { label2.Text = (PlayerCardValue - int.Parse(OpponentCardValue)).ToString(); }
-            if (int.Parse(OpponentCardValue) == PlayerCardValue) { label2.Text = "DRAW"; }
+            //test label, will be deleted later.
 
+            if (int.Parse(OpponentCardValue) > PlayerCardValue)
+            {
+                label2.Text = "-" + (int.Parse(OpponentCardValue) - PlayerCardValue).ToString();
+                imageListCardsPlayer.Images.RemoveByKey(imageListCardsPlayer.Images.Keys[Cardpick]);
+                PlayerDeckLength--;
+                //pictureBox2_Diamonds.Refresh();
+                //pictureBox3_Diamonds.Refresh();
+                //pictureBox4_Diamonds.Refresh();
+                //pictureBox5_Diamonds.Refresh();
+                //pictureBox6_Diamonds.Refresh();
+                //pictureBox7_Diamonds.Refresh();
+                //pictureBox8_Diamonds.Refresh();
+                //pictureBox9_Diamonds.Refresh();
+                //pictureBox10_Diamonds.Refresh();
+                //pictureBoxAce_Diamonds.Refresh();
+                //pictureBoxJack_Diamonds.Refresh();
+                //pictureBoxKing_Diamonds.Refresh();
+                //pictureBoxQueen_Diamonds.Refresh();
+                //pictureBox2_Hearts.Refresh();
+                //pictureBox3_Hearts.Refresh();
+                //pictureBox4_Hearts.Refresh();
+                //pictureBox5_Hearts.Refresh();
+                //pictureBox6_Hearts.Refresh();
+                //pictureBox7_Hearts.Refresh();
+                //pictureBox8_Hearts.Refresh();
+                //pictureBox9_Hearts.Refresh();
+                //pictureBox10_Hearts.Refresh();
+                //pictureBoxAce_Hearts.Refresh();
+                //pictureBoxJack_Hearts.Refresh();
+                //pictureBoxKing_Hearts.Refresh();
+                //pictureBoxQueen_Hearts.Refresh();
+
+
+            }
+            //if the Opponent has a higher value card, they win the round and the score is calculated.
+            if (int.Parse(OpponentCardValue) < PlayerCardValue)
+            {
+                label2.Text = (PlayerCardValue - int.Parse(OpponentCardValue)).ToString();
+                imageListCardsOpponent.Images.RemoveByKey(imageListCardsOpponent.Images.Keys[Cardpick]);
+                OpponentDeckLength--;
+               }
+            //if the Player has a higher value card, they win the round and the score is calculated.
+            //the program then deletes the opponent's card from the imagelist, or 'deck', and the calculated range for the opponent is decremented by one.
+            //
+            if (int.Parse(OpponentCardValue) == PlayerCardValue) { label2.Text = "DRAW";
+                //the 2 lines below are only for testing
+                imageListCardsOpponent.Images.RemoveByKey(imageListCardsOpponent.Images.Keys[Cardpick]);
+                OpponentDeckLength--;
+            }
+
+            
 
         }
 
@@ -239,9 +342,7 @@ namespace WarCardGame
         private void pictureBoxKing_Hearts_Click(object sender, EventArgs e) { pictureBoxPlayerPreview.BackgroundImage = pictureBoxKing_Hearts.Image; PlayerCardValue = 12; }
         private void pictureBoxQueen_Hearts_Click(object sender, EventArgs e) { pictureBoxPlayerPreview.BackgroundImage = pictureBoxQueen_Hearts.Image; PlayerCardValue = 13; }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        //when you click a card, it selects it for you in the preview.
+        
     }
 }
