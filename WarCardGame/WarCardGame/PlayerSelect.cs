@@ -104,9 +104,9 @@ namespace WarCardGame
             this.Close();
 
               
-            }catch
+            }catch(Exception ex)
             {
-                MessageBox.Show("Hunter was here c:");
+                MessageBox.Show(ex.Message);
 
             }
         }
