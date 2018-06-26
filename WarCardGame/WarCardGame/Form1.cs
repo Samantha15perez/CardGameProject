@@ -8,31 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/* things left to do:
- * 
- * assign a value to every card --DONE
- * create "turns"
- * create a method to have your 'opponent' pick a card --DONE
- *      (the opponent you choose will determine which cards you will fight against)
- * check both card values against each other and choose a winner
- *  for every card won, a picturebox containing a face-down card is stacked
- *  for the illusion of a growing "winnings" pile
- *  -EDIT- actually put the won cards into the player's deck
- *  
- * card value depends on the actual image name within the image list//OR the picturebox itself
- * (NOT HARDCODED) --DONE
- * 
- * 
- * 
- * save results to file
- * endgame triggers save score; the score is the number of points won in the match, with a multiplier
- * easy = x1, medium = x2, hard = x3, surprise = random
- * 
- * LAST- work on art;
- * opponents should have multiple sprites--
- * winning pose, losing pose, happy pose, sad pose, and standard pose. 5 total.
- * 
- */
+
 
 
 
@@ -46,14 +22,7 @@ namespace WarCardGame
         public string PlayerName;
         public bool Q = false;
         public int Opponent;
-        //public string[] CardDeck = new string[52];
-        //public int opponentleftpos = 250;
-        //public int opponenttoppos = 275;
-        //public int leftpos = 100;
-        //public int toppos = 450;
-        //public int CardLocation = 0;
-        //public int i = 0;
-        //public int x = 0;
+
         public int PlayerCardValue;
         public string PlayerCard;
         public string OpponentCardValue;
@@ -189,7 +158,7 @@ namespace WarCardGame
                 //sets up your deck in front of you
 
 
-                //pictureBoxOpponentPreview.BackgroundImage = imageListCardsOpponent.Images[CardDeckLength];
+
 
                 pictureBoxPlayerPreview.BackgroundImageLayout = ImageLayout.Stretch;
                 pictureBoxOpponentPreview.BackgroundImageLayout = ImageLayout.Stretch;
@@ -226,8 +195,8 @@ namespace WarCardGame
 
         private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Instructions will be included soon");
-            //placeholder for instructions. full instructions will be placed here.
+            MessageBox.Show("Pick a card to face off against your opponent's card. When you've made your selection, hit SELECT and whichever team picks a higher ranked card wins the round. When either team exhausts their deck, the game ends. Whoever has a higher score wins the war.");
+            //Basic instructions are included in a messagebox. a more professionally packaged game would have multiple pages with screenshots, but I ran short on time. 
         }
 
         
@@ -275,7 +244,7 @@ namespace WarCardGame
             if (int.Parse(OpponentCardValue) > PlayerCardValue)
             {
                 label2.Text = "-" + (int.Parse(OpponentCardValue) - PlayerCardValue).ToString();
-                //imageListCardsPlayer.Images.RemoveByKey(imageListCardsPlayer.Images.Keys[Cardpick]);
+
                 PlayerDeckLength--;
 
             }
@@ -283,7 +252,7 @@ namespace WarCardGame
             else if (int.Parse(OpponentCardValue) < PlayerCardValue)
             {
                 label2.Text = (PlayerCardValue - int.Parse(OpponentCardValue)).ToString();
-                //imageListCardsOpponent.Images.RemoveByKey(imageListCardsOpponent.Images.Keys[Cardpick]);
+
                 OpponentDeckLength--;
             }
             //if the Player has a higher value card, they win the round and the score is calculated.
@@ -292,7 +261,7 @@ namespace WarCardGame
             else if (int.Parse(OpponentCardValue) == PlayerCardValue)
             { label2.Text = "DRAW";
                 //the 2 lines below are only for testing
-                //imageListCardsOpponent.Images.RemoveByKey(imageListCardsOpponent.Images.Keys[Cardpick]);
+
                 OpponentDeckLength--;
             }
 
