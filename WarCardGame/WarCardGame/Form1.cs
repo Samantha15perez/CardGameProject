@@ -47,7 +47,7 @@ namespace WarCardGame
             label1.Text = PlayerName;
             //shows the playername! 
 
-            if (Opponent == 0) { pictureBoxOpponent.Image = imageListSelectedOpponent.Images[0]; }
+            if (Opponent == 0) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.ful }
             if (Opponent == 1) { pictureBoxOpponent.Image = imageListSelectedOpponent.Images[1]; }
             if (Opponent == 2) { pictureBoxOpponent.Image = imageListSelectedOpponent.Images[2]; }
             if (Opponent == 3) { pictureBoxOpponent.Image = imageListSelectedOpponent.Images[3]; }
@@ -205,6 +205,8 @@ namespace WarCardGame
         {
             Random rand = new Random(DateTime.Now.Millisecond);
             int Cardpick = rand.Next(0, OpponentDeckLength);
+            //pictureBoxPlayerPreview.Image = WarCardGame.Properties.Resources.Card_Select1;
+            
             //selects a card for your opponent to play
             
             if (imageListCardsOpponent.Images[Cardpick] == imageListCardsOpponent.Images[OpponentDeckLength])
@@ -315,6 +317,7 @@ namespace WarCardGame
                 {
                     PlayerCardValue = card.CardValue;
                     PlayerCard = card.CardKey;
+                    
                     break;
                 }
             }

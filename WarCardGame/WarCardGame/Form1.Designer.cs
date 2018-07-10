@@ -223,13 +223,13 @@
             this.forfeitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.forfeitMatchToolStripMenuItem});
             this.forfeitToolStripMenuItem.Name = "forfeitToolStripMenuItem";
-            this.forfeitToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.forfeitToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.forfeitToolStripMenuItem.Text = "Options";
             // 
             // forfeitMatchToolStripMenuItem
             // 
             this.forfeitMatchToolStripMenuItem.Name = "forfeitMatchToolStripMenuItem";
-            this.forfeitMatchToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.forfeitMatchToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.forfeitMatchToolStripMenuItem.Text = "Forfeit Match";
             this.forfeitMatchToolStripMenuItem.Click += new System.EventHandler(this.forfeitMatchToolStripMenuItem_Click_1);
             // 
@@ -238,13 +238,13 @@
             this.instructionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.howToPlayToolStripMenuItem});
             this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.instructionsToolStripMenuItem.Text = "Instructions";
             // 
             // howToPlayToolStripMenuItem
             // 
             this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
-            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.howToPlayToolStripMenuItem.Text = "How to play";
             this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
             // 
@@ -268,9 +268,12 @@
             // 
             // pictureBoxPlayerPreview
             // 
+            this.pictureBoxPlayerPreview.BackgroundImage = global::WarCardGame.Properties.Resources.Card_Select;
+            this.pictureBoxPlayerPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxPlayerPreview.Location = new System.Drawing.Point(637, 66);
             this.pictureBoxPlayerPreview.Name = "pictureBoxPlayerPreview";
             this.pictureBoxPlayerPreview.Size = new System.Drawing.Size(129, 163);
+            this.pictureBoxPlayerPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPlayerPreview.TabIndex = 10;
             this.pictureBoxPlayerPreview.TabStop = false;
             this.pictureBoxPlayerPreview.Tag = "playercarddisplay";
