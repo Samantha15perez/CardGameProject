@@ -22,6 +22,7 @@ namespace WarCardGame
         public string PlayerName;
         public bool Q = false;
         public int Opponent;
+        public int Score;
 
         public int PlayerCardValue;
         public string PlayerCard;
@@ -41,17 +42,19 @@ namespace WarCardGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            pictureBoxPlayerPreview.BackgroundImage = WarCardGame.Properties.Resources.Card_Select;
             this.MaximizeBox = false;
             //makes the window unable to be resized
             
             label1.Text = PlayerName;
             //shows the playername! 
 
-            if (Opponent == 0) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.ful }
-            if (Opponent == 1) { pictureBoxOpponent.Image = imageListSelectedOpponent.Images[1]; }
-            if (Opponent == 2) { pictureBoxOpponent.Image = imageListSelectedOpponent.Images[2]; }
-            if (Opponent == 3) { pictureBoxOpponent.Image = imageListSelectedOpponent.Images[3]; }
-        
+            if (Opponent == 0) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody1; label5.Visible = true; label6.Visible = true; }
+            if (Opponent == 1) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody2; label5.Visible = false; label6.Visible = false; }
+            if (Opponent == 2) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody3; label5.Visible = false; label6.Visible = false; }
+            if (Opponent == 3) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody4; label5.Visible = false; label6.Visible = false; }
+
             //loads in the opponent you chose before. 
 
             pictureBoxOpponent.BackgroundImageLayout = ImageLayout.None;
@@ -203,9 +206,18 @@ namespace WarCardGame
 
         private void SelectCardTest_Click(object sender, EventArgs e)
         {
+            if (pictureBoxPickACard.Visible == true || pictureBoxPlayerPreview.BackgroundImage == WarCardGame.Properties.Resources.Card_Select)
+            {
+                MessageBox.Show("you need to pick a card, dingus");
+
+            }
+
+            else
+            {
+
             Random rand = new Random(DateTime.Now.Millisecond);
             int Cardpick = rand.Next(0, OpponentDeckLength);
-            //pictureBoxPlayerPreview.Image = WarCardGame.Properties.Resources.Card_Select1;
+            
             
             //selects a card for your opponent to play
             
@@ -220,6 +232,7 @@ namespace WarCardGame
                 //shows the true card
             }
             
+
 
 
 
@@ -242,10 +255,19 @@ namespace WarCardGame
 
             label5.Text = OpponentCardValue.ToString();
             //test label, will be deleted later.
+        
 
             if (int.Parse(OpponentCardValue) > PlayerCardValue)
             {
-                label2.Text = "-" + (int.Parse(OpponentCardValue) - PlayerCardValue).ToString();
+                Score = (Score - (int.Parse(OpponentCardValue) - PlayerCardValue));
+                if (Score < 0) { Score = 0; }
+                label2.Text = Score.ToString();
+                
+
+                if (Opponent == 0) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody1; }
+                if (Opponent == 1) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody2; }
+                if (Opponent == 2) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody3Happy; }
+                if (Opponent == 3) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody4Happy; }
 
                 PlayerDeckLength--;
 
@@ -253,7 +275,13 @@ namespace WarCardGame
             //if the Opponent has a higher value card, they win the round and the score is calculated.
             else if (int.Parse(OpponentCardValue) < PlayerCardValue)
             {
-                label2.Text = (PlayerCardValue - int.Parse(OpponentCardValue)).ToString();
+                Score = (Score + (PlayerCardValue - int.Parse(OpponentCardValue)));
+                label2.Text = Score.ToString();
+
+                if (Opponent == 0) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody1; }
+                if (Opponent == 1) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody2; }
+                if (Opponent == 2) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody3Angry; }
+                if (Opponent == 3) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody4Angry; }
 
                 OpponentDeckLength--;
             }
@@ -261,8 +289,12 @@ namespace WarCardGame
             //the program then deletes the opponent's card from the imagelist, or 'deck', and the calculated range for the opponent is decremented by one.
             //
             else if (int.Parse(OpponentCardValue) == PlayerCardValue)
-            { label2.Text = "DRAW";
-                //the 2 lines below are only for testing
+            { label2.Text = Score.ToString();
+
+                if (Opponent == 0) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody1; }
+                if (Opponent == 1) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody2; }
+                if (Opponent == 2) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody3; }
+                if (Opponent == 3) { pictureBoxOpponent.Image = WarCardGame.Properties.Resources.fullbody4; }
 
                 OpponentDeckLength--;
             }
@@ -287,22 +319,27 @@ namespace WarCardGame
                 if (PlayerDeckLength > OpponentDeckLength)
                 {
                     MessageBox.Show("WIN");
-                    this.Close();
+                    //if score is higher than previously listed high score, overwrite player highscore
+                    
                 }
                 else if (PlayerDeckLength < OpponentDeckLength)
                 {
                     MessageBox.Show("LOSE");
-                    this.Close();
+                    
                 }
                 else
                 {
                     MessageBox.Show("DRAW");
-                    this.Close();
+                    
                 }
+
+                //set 'last played' to current date
+                this.Close();
+
             }
 
-
-
+            pictureBoxPickACard.Visible = true;
+            }
         }
 
         private void CardClick(object sender, EventArgs e)
@@ -324,11 +361,11 @@ namespace WarCardGame
 
             //show the card the Player clicked in the upper corner
             pictureBoxPlayerPreview.BackgroundImage = chosen.Image;
+            pictureBoxPickACard.Visible = false;
 
             
         }
 
-        
 
     }
 }

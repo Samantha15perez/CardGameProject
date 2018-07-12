@@ -166,4 +166,31 @@
   <data name="Card_Select1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Card_Select.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fullbody11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullbody2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullbody3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullbody4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullbody31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullbody3Angry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody3Angry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullbody3Happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody3Happy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullbody4Angry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody4Angry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fullbody4Happy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fullbody4Happy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

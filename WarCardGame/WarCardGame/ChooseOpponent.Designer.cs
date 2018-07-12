@@ -82,8 +82,8 @@
             this.imageListOpponent.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListOpponent.ImageStream")));
             this.imageListOpponent.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListOpponent.Images.SetKeyName(0, "op1prev.png");
-            this.imageListOpponent.Images.SetKeyName(1, "op2prev.png");
-            this.imageListOpponent.Images.SetKeyName(2, "op3prev.png");
+            this.imageListOpponent.Images.SetKeyName(1, "op3prev.png");
+            this.imageListOpponent.Images.SetKeyName(2, "op2prev.png");
             this.imageListOpponent.Images.SetKeyName(3, "op4prev.png");
             // 
             // buttonStartGame

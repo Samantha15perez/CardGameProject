@@ -49,12 +49,14 @@
             this.SelectCardTest = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.imageListSelectedOpponent = new System.Windows.Forms.ImageList(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBoxPickACard = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponentPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayerPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPickACard)).BeginInit();
             this.SuspendLayout();
             // 
             // imageListCardDeck
@@ -180,6 +182,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label1.Location = new System.Drawing.Point(240, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
@@ -250,12 +253,10 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(412, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Score:";
             // 
             // pictureBoxOpponentPreview
             // 
@@ -281,11 +282,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 50);
+            this.label3.Location = new System.Drawing.Point(58, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.Size = new System.Drawing.Size(126, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Opponent Card:";
+            this.label3.Text = "Opponent Previous Card:";
             // 
             // label4
             // 
@@ -324,14 +325,25 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "VALUE:  ";
             // 
-            // imageListSelectedOpponent
+            // label7
             // 
-            this.imageListSelectedOpponent.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSelectedOpponent.ImageStream")));
-            this.imageListSelectedOpponent.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListSelectedOpponent.Images.SetKeyName(0, "OPP1.png");
-            this.imageListSelectedOpponent.Images.SetKeyName(1, "OPP2.png");
-            this.imageListSelectedOpponent.Images.SetKeyName(2, "OPP3.png");
-            this.imageListSelectedOpponent.Images.SetKeyName(3, "OPP4.png");
+            this.label7.Location = new System.Drawing.Point(368, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Score:";
+            // 
+            // pictureBoxPickACard
+            // 
+            this.pictureBoxPickACard.BackgroundImage = global::WarCardGame.Properties.Resources.Card_Select;
+            this.pictureBoxPickACard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxPickACard.Location = new System.Drawing.Point(637, 66);
+            this.pictureBoxPickACard.Name = "pictureBoxPickACard";
+            this.pictureBoxPickACard.Size = new System.Drawing.Size(129, 163);
+            this.pictureBoxPickACard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPickACard.TabIndex = 10;
+            this.pictureBoxPickACard.TabStop = false;
+            this.pictureBoxPickACard.Tag = "playercarddisplay";
             // 
             // Form1
             // 
@@ -344,9 +356,11 @@
             this.Controls.Add(this.SelectCardTest);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBoxPickACard);
             this.Controls.Add(this.pictureBoxPlayerPreview);
             this.Controls.Add(this.pictureBoxOpponentPreview);
             this.Controls.Add(this.pictureBoxOpponent);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -364,6 +378,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOpponentPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayerPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPickACard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,7 +405,8 @@
         private System.Windows.Forms.Button SelectCardTest;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ImageList imageListSelectedOpponent;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBoxPickACard;
     }
 }
 

@@ -142,7 +142,12 @@
     <None Include="Resources\fullbody1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\fullbody3Angry.png" />
+    <None Include="Resources\fullbody3Happy.png" />
     <Content Include="Resources\fullbody4.png" />
+    <None Include="Resources\fullbody4Happy.png" />
+    <None Include="Resources\fullbody4Angry.png" />
+    <None Include="Resources\OpponentFullSprite.bmp" />
     <None Include="Resources\PixelatedLogo.png" />
     <None Include="Poker Small\Backface_Blue.bmp" />
     <None Include="Resources\Card_Select.png" />
